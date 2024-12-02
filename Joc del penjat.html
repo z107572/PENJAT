@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <title>Joc del penjatenjat</title>
+            <script>
+            function comprovar(){
+        lletra = document.getElementById("lletra").value;
+        
+            if ((lletra <="a") && (lletra <="m")) {
+                window.alert("Correcte");
+            } else {
+                window.alert("Incorrecte");
+            }
+        }  
+            </script>
+        </head>
+        <body>
+            <h1>Prototip Joc del Penjat</h1>
+                <input id="lletra"  placeholder="Introduce la letra" type="text">  
+                <button id="comprovar" onclick="comprovar();">comprovar</button>
+            <h2>Paraula</h2>
+                <div id="Paraula">_ _ _ _ _ _ _</div>
+            <h2>Vides</h2>
+                <div id="Paraula">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp-</div>
+            <h2>Lletres</h2>
+                <div id="Lletres">_ _ _ _ _ _ _</div>
+            <br>
+            <p><strong>Credits:
+                <a HREF="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/"> Joc del Penjat </a>
+            </strong></p>
+            
+           <form>
+               <label for="leter"></label>
+           </form>
+        </body>
+    </html>
