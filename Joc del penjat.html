@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-        <head>
+    <head>
+    <meta charset="UTF-8">
+  
             <title>Joc del penjatenjat</title>
             <script>
                 var vidas = 7;
@@ -9,7 +11,7 @@
                 
             function comprovar(){
         lletra = document.getElementById("lletra").value;
-        lletra = lletra.toLowerCase();
+        lletra = lletra.toLowerCase();  
         switch (lletra){
             case "á":
             case "à":
@@ -32,11 +34,12 @@
             lletra = "u";
             break;
         } 
-            if ((lletra >="a") && (lletra <="m") || (lletra === "ç")) {
+            if (((lletra >="a") && (lletra <="m")) || (lletra === "ç")) {
                 window.alert("Correcte");
                 document.getElementById("paraula").innerHTML =
                 paraula = paraula + lletra + " ";
-            } else {
+            } else if (((lletra >="n") && (lletra <="z")) || (lletra === "ñ"))
+            {
                 document.getElementById("fallo").innerHTML =
                 fallos = fallos + lletra + " ";
                 window.alert("Incorrecte"); 
@@ -64,7 +67,7 @@
         </head>
         <body>
             <h1>Prototip Joc del Penjat</h1>
-                <input id="lletra"  placeholder="Introduce la letra" type="text">  
+            <input id="lletra"  placeholder="Introduce la letra" maxlength="1" type="text">  
                 <button id="comprovar" onclick="comprovar();">comprovar</button>
             <h2>Paraula</h2>
                 <div id="paraula">_ _ _ _ _ _ _</div>
