@@ -56,23 +56,28 @@
         } 
         if (((lletra >="a") && (lletra <="m")) || (lletra === "ç")) {
             window.alert("Correcte");
+            document.getElementById("aciertob").play();
             document.getElementById("paraula").innerHTML =
             paraula = paraula + lletra + " ";
+            document.getElementById("clock").play();
         } else if (((lletra >="n") && (lletra <="z")) || (lletra === "ñ"))
         {
             document.getElementById("fallo").innerHTML =
             fallos = fallos + lletra + " ";
-            window.alert("Incorrecte"); 
+            window.alert("Incorrecte");
+            document.getElementById("incorrectob").play();
             vidas = vidas - 1;
-            
+            document.getElementById("clock").play();
             muestraimg();
             }
             if (vidas <=0) {
                 aturatot();
                 window.alert("has perdido");
+                document.getElementById("pelea").play();
                         document.body.style.backgroundImage = "url('img/Jungle.png')";
                         document.getElementById("gato1").hidden = true;
                         document.getElementById("gato3").hidden = false;
+                        window.alert("RIP");
                         document.getElementById("derrota").play();
 
 
@@ -135,4 +140,10 @@
             
             
         }
+    }
+    
+    
+    function mystery() {
+        
+        document.getElementById("misterio").play();
     }
