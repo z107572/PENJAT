@@ -136,28 +136,3 @@
             
         }
     }
-
-    function esp(){
-        
-    }
-
-    function cat(){
-
-    }
-
-    function ing(){
-
-    }
-
-
-    function fra(){
-
-    }
-
-    function ita(){
-
-    }
-
-    function ale(){
-
-    }
