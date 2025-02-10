@@ -2,7 +2,7 @@
 <html>
     <head>
     <meta charset="UTF-8">
-            <title>Joc del penjatenjat imatges i sons</title>
+            <title>Joc del penjat imatges i sons</title>
             <script src="Imatges i sons.js" type="text/javascript"></script>
             <link href="Imatges i sons.css" rel="stylesheet" type="text/css"/>
         </head>
@@ -11,7 +11,7 @@
             
             
             
-            <h1>Joc del penjatenjat imatges i sons</h1>
+            <h1>Joc del penjat imatges i sons</h1>
             <input id="lletra"  placeholder="Introduce la letra" maxlength="1" type="text">  
                 <button id="comprovar" onclick="comprovar();">comprovar</button>
             <h2>Paraula</h2>
@@ -60,6 +60,11 @@
                     <img src="img/it.png" id="italiano" onclick="ita()">
                     <img src="img/de.png" id="aleman" onclick="ale()">
                        
+                    </div>
+                    
+                    <div id="audios">
+                        <audio src="aud/bell_toll_x3.mp3" id="derrota"></audio>
+                        <audio src="aud/cheer.mp3" id="victoria"></audio>
                     </div>
               
             </form>

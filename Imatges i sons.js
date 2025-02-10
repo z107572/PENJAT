@@ -54,18 +54,18 @@
             lletra = "u";
             break;
         } 
-            if (((lletra >="a") && (lletra <="m")) || (lletra === "ç")) {
-                window.alert("Correcte");
-                document.getElementById("paraula").innerHTML =
-                paraula = paraula + lletra + " ";
-            } else if (((lletra >="n") && (lletra <="z")) || (lletra === "ñ"))
-            {
-                document.getElementById("fallo").innerHTML =
-                fallos = fallos + lletra + " ";
-                window.alert("Incorrecte"); 
-                vidas = vidas - 1;
-                
-                muestraimg();
+        if (((lletra >="a") && (lletra <="m")) || (lletra === "ç")) {
+            window.alert("Correcte");
+            document.getElementById("paraula").innerHTML =
+            paraula = paraula + lletra + " ";
+        } else if (((lletra >="n") && (lletra <="z")) || (lletra === "ñ"))
+        {
+            document.getElementById("fallo").innerHTML =
+            fallos = fallos + lletra + " ";
+            window.alert("Incorrecte"); 
+            vidas = vidas - 1;
+            
+            muestraimg();
             }
             if (vidas <=0) {
                 aturatot();
@@ -73,10 +73,13 @@
                         document.body.style.backgroundImage = "url('img/Jungle.png')";
                         document.getElementById("gato1").hidden = true;
                         document.getElementById("gato3").hidden = false;
+                        document.getElementById("derrota").play();
+
 
             } else {
                 if (paraula.length >= 14) {
                     window.alert("Has ganado");
+                    document.getElementById("victoria").play();
                     document.getElementById("gato1").hidden = true;
                     document.getElementById("gato2").hidden = false;
                     aturatot();
