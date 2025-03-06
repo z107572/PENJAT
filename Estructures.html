@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+   
+        <meta charset="UTF-8">
+            <title>Joc del penjat estructures</title>
+            <script src="Estructures.js" type="text/javascript"></script>
+            <link href="Estructures.css" rel="stylesheet" type="text/css"/>
+        </head>
+        <body onload="esconder(); mystery();"  style="background-image: url('img/Desert.png');
+            background-size: 660px 500px; background-repeat : no-repeat;">
+           
+           
+           
+            <h1>Joc del penjat Estructures</h1>
+            <input id="lletra"  placeholder="Introduce la letra" maxlength="1" type="text">  
+                <button id="comprovar" onclick="comprovar();">comprovar</button>
+            <h2>Paraula</h2>
+                <div id="paraula">_ _ _ _ _ _ _</div>
+                <p></p>
+                <button id="muestrapista" onclick="muestrapista();">Pista</button>
+                <h2>Vides</h2>
+                <div id="vidas">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp_</div>
+            <h2>Lletres</h2>
+                <div id="fallos">_ _ _ _ _ _ _</div>
+            <br>
+            <h2 id="counter">0</h2>
+            <p><strong>Credits:
+                <a HREF="https://prosselloe.wordpress.com/2022/11/22/el-joc-del-penjat-on-scratch/"> Joc del Penjat </a>
+            </strong></p>
+           
+            <form>
+               
+                   <div id="banderas">
+                   <a href="https://zippy--scone--bdc44b-netlify-app.translate.goog/imatges%20i%20sons?_x_tr_sl=ca&_x_tr_tl=es&_x_tr_hl=ca&_x_tr_pto=wapp"><img id="es" src="img/es.png" alt="esp"/></a>
+                   <a href="https://zippy--scone--bdc44b-netlify-app.translate.goog/imatges%20i%20sons?_x_tr_sl=es&_x_tr_tl=ca&_x_tr_hl=ca&_x_tr_pto=wapp"><img id="ca" src="img/ca.png" alt="cat"/></a>
+                   <a href="https://zippy--scone--bdc44b-netlify-app.translate.goog/imatges%20i%20sons?_x_tr_sl=es&_x_tr_tl=en&_x_tr_hl=ca&_x_tr_pto=wapp"><img id="in" src="img/gb.png" alt="ing"/></a>
+                   
+
+
+                       
+                    </div>
+               
+                <div id="imatges">
+                    <img src="img/ahorcado_6.png" id="ahorcado_6" style="width:234px;height:270px;" title="Te quedan 6 vidas">
+                    <img src="img/ahorcado_5.png" id="ahorcado_5" style="width:234px;height:270px;" title="Te quedan 5 vidas">
+                    <img src="img/ahorcado_4.png" id="ahorcado_4" style="width:234px;height:270px;" title="Te quedan 4 vidas">
+                    <img src="img/ahorcado_3.png" id="ahorcado_3" style="width:234px;height:270px;" title="Te quedan 3 vidas">
+                    <img src="img/ahorcado_2.png" id="ahorcado_2" style="width:234px;height:270px;" title="Te quedan 2 vidas">
+                    <img src="img/ahorcado_1.png" id="ahorcado_1" style="width:234px;height:270px;" title="Te queda 1 vida">
+                    <img src="img/ahorcado_0.png" id="ahorcado_0" style="width:234px;height:270px;" title="Muerte">
+                    <a href="img/ahorcado.jpg">
+                    </a>
+                </div>
+               
+                <div id="diagrama">
+                <img src="img/ahorcado.jpg" id="ahorcado" style="width:234px;height:270px;">
+                   
+                </div>
+               
+                <div id="gatos">
+                <img src="img/disfraz3.png" id="gato1" style="width:86px;height:90px;">
+                <img src="img/caminar.gif" id="gato2" style="width:86px;height:90px;">
+                <img src="img/rotar.gif" id="gato3" style="width:86px;height:90px;">
+
+
+                   
+                </div>
+                   
+                    <div id="audios">
+                        <audio src="aud/bell_toll_x3.mp3" id="derrota"></audio>
+                        <audio src="aud/cheer.mp3" id="victoria"></audio>
+                        <audio src="aud/miau.mp3" id="aciertob"></audio>
+                        <audio src="aud/boom_cloud.mp3" id="incorrectob"></audio>
+                        <audio src="aud/mystery.mp3" id="misterio"></audio>
+                        <audio src="aud/cat-fight.mp3" id="pelea"></audio>
+                        <audio src="aud/clock_ticking.mp3" id="clock"></audio>
+                       
+                    </div>
+             
+            </form>
+           
+           <form>
+               <label for="lletra"></label>
+           </form>
+
+
+        </body>
+         </html>
