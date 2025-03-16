@@ -29,6 +29,9 @@ function muestrapista(){
     window.alert(pista);
     window.alert(Paraula); 
 }
+
+
+
 function esconder() {
             document.getElementById("ahorcado_6").hidden = true;
             document.getElementById("ahorcado_5").hidden = true;
@@ -82,16 +85,16 @@ if (Paraula.includes(lletra)){
     }
     document.getElementById("paraula").innerHTML = paraula;
     document.getElementById("aciertob").play();
-    document.getElementById("clock").play();
-    
+    document.getElementById("clock").play();   
 }else{
     if (Lletres.indexOf(lletra) !== -1){
     window.alert ("lletra repetida");
 }else{
     window.alert ("Has fallado");
-    Lletres[7 - vidas] = lletra;
+    Lletres[ 7 - vidas ] = lletra;
     vidas = vidas -1 ;
-   
+document.getElementById("vidas").innerHTML = 
+"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + vidas;   
     muestraimg();
     document.getElementById("fallos").innerHTML = Lletres;
     document.getElementById("incorrecto").play();
@@ -128,8 +131,6 @@ if (paraula.indexOf("_")=== -1) {
             document.getElementById("ahorcado").hidden = false;
 }
 }
-document.getElementById("vidas").innerHTML = 
-"&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + vidas;
 
         }
         function aturatot(){
