@@ -1,0 +1,51 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 28 de gen. 2025, 9:31:09
+    Author     : aula1PTD1
+*/
+ 
+    #teclat {position:relative; top :-670px; left:400px;}
+    #gatos {position:relative; top :-470px; left:250px;}
+    #banderas {position:relative; top :-530px; left:300px;}  
+    #imatges {position:relative; top :-370px; left:318px;}
+    #diagrama {position:relative; top :-370px; left:318px;}
+    #enlaces {position:relative; top :-2px; left:290px;}  
+    #enlaces2 {position:relative; top :-80px; left:20px;}
+    
+    
+    	
+html {
+        background:#222;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+    body {
+        background:linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+        border:1px solid black;
+        padding:10px 20px;
+        box-shadow:5px 0px 30px #000;
+        border-radius:8px;
+        margin:0;
+        width:640px;
+        height:480px;
+    }
+
+    h1, a {
+        background: linear-gradient(#aaa 0, #ddd 10px, #fff 55px);
+        border: 1px solid black;
+        padding: 1px 1px;
+        box-shadow: 5px 0px 30x #000;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 600px;
+    }
+
+    h2 {
+        color: white;
+    }
+    
