@@ -88,7 +88,7 @@ if (Paraula.includes(lletra)){
     document.getElementById("clock").play();   
 }else{
     if (Lletres.indexOf(lletra) !== -1){
-    window.alert ("lletra repetida");
+    window.alert ("Idioma.Repetida");
 }else{
     window.alert ("Has fallado");
     Lletres[ 7 - vidas ] = lletra;
