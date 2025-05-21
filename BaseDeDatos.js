@@ -1,8 +1,9 @@
- /* 
+/* 
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
-    const Idiomes_dft = [
+
+ const Idiomes_dft = [
         {
             "IdIdioma": "ca",
             "Titol": "Versió amb Estructures de Dades Joc del Penjat",
@@ -104,45 +105,14 @@
             "Perdut": "and you have lost!",
             "Descansi": "Rest in peace - RIP!",
             "Puntuacio": "Score:"
-        },
-        {
-            "IdIdioma": "fr",
-            "Titol": "Version avec Base de Données Jeu du Pendu",
-            "Versio": "Version γ Jeu du Pendu",
-            "Input": "Ecrire une lettre minuscule",
-            "Pregunta": "Allons-nous aux banlieue?",
-            "Comprovar": "Vérifier",
-            "Paraula": "Mot:",
-            "Sopes": "Tu abandonnes?",
-            "Pista": "Indice",
-            "Vides": "Vies:",
-            "Moix": "Un chat en a sept?",
-            "Lletres": "Lettres:",
-            "Ets": "Êtes-vous dans les lettres?",
-            "URLpistes": "URLindices:",
-            "Dita": "Dit",
-            "Dita1": "Aux banlieue,",
-            "Dita2": "Chez un pendu, ne parle pas de cordes,",
-            "Dita3": "Seize juges d'un tribunal mangent le foie d'un pendu, …",
-            "Credits": "Crédits:",
-            "YouTube": "Jeu Pendu sur Scratch",
-            "Wikis": "Pendu",
-            "Idioma": "en Français",
-            "Diccionari": "Dictionnaire",
-            "Teclat": "Afficher ou Masquer",
-            "Incorrecte": "Caractère non valide!",
-            "Repetida": "Lettre répétée!",
-            "Encertat": "Vous as raison!",
-            "Guanyat": "et vous avez gagné!",
-            "Fallat": "Vous avez échoué!",
-            "Perdut": "et vous avez perdu!",
-            "Descansi": "Repose en paix - RIP!",
-            "Puntuacio": "Score:"
         }
     ]
-    var Idiomes = Idiomes_dft;
+    var Idiomes = Idiomes_dft; 
     var Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == "ca");
-    
+
+
+
+
 var vidas = 7;
 var paraula = [];
 var fallos = ["_", "_", "_", "_", "_", "_", "_"];
@@ -277,8 +247,13 @@ if (paraula.indexOf("_")=== -1) {
         function aturatot(){
             document.getElementById("lletra").disabled = true;
             document.getElementById("comprovar").disabled = true;
-        }
         
+        
+AlaWeb_SQLite("ca");
+            }           
+
+
+
         function muestraimg(){
             switch (vidas){
             case 6:
@@ -323,36 +298,37 @@ if (paraula.indexOf("_")=== -1) {
         
         document.getElementById("misterio").play();
     }
-    
-    // Canviam els diferents literals de la GUI segons l'idioma
-    function CanviarIdioma(IdIdioma) {
+
+ function CanviarIdioma(IdIdioma) {
 
         AlaWeb_SQLite(IdIdioma);
         Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == IdIdioma);
+
        
-        document.title = Idioma.Titol;
-        document.getElementById("Versio").innerHTML = Idioma.Versio;
-        
         /*
-        document.getElementById("lletra").placeholder = Idioma.Input;
-        document.getElementById("comprovar").innerHTML = Idioma.Comprovar;
+        document.title = Idioma.Titol;
+        */
+        document.getElementById("Versio").innerHTML = Idioma.Versio;
+        document.getElementById("letra").placeholder = Idioma.Input;
+        document.getElementById("button").innerHTML = Idioma.Comprovar;
         document.getElementById("paraula").innerHTML = Idioma.Paraula;
+        document.getElementById("vides").innerHTML = Idioma.Vides;
+        document.getElementById("letras").innerHTML = Idioma.Lletres;
+        
+        /*       
         document.getElementById("Sopes").innerHTML = Idioma.Sopes;
-        document.getElementById("muestrapista").innerHTML = Idioma.Pista;        
-        document.getElementById("vidas").innerHTML = Idioma.Vides;
+        document.getElementById("button2").innerHTML = Idioma.Pista;                
         document.getElementById("Moix").innerHTML = Idioma.Moix;
-        document.getElementById("Lletres").innerHTML = Idioma.Lletres;
-         */
-       
+        */
 
         // Escull una nova paraula aleatòriament
         window.alert("Nova paraula aleatòria / Nueva palabra aleatoria / New random word!");
         // window.alert("[" + paraula + "]=[" + pista + "]");
    }
-  
-  // Funció per carregar la base de dades penjat.db
+        
+    // Funció per carregar la base de dades penjat.db
     function AlaWeb_SQLite(IdIdioma) {
-        // window.alert("AlaWeb_SQLite IdIdioma = '" + IdIdioma + "'");
+        window.alert("AlaWeb_SQLite IdIdioma = '" + IdIdioma + "'");
         config = {
             locateFile: filename => `/dist/${filename}`
         };
@@ -364,8 +340,6 @@ if (paraula.indexOf("_")=== -1) {
             [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
         );
     }
-
-    function SQL_TblTextosGUI(IdIdioma, IdIdioma1) {}
 
     // Print data  
     function Print_Data(res) {
@@ -381,3 +355,7 @@ if (paraula.indexOf("_")=== -1) {
              }
         }
     }
+    
+    function SQL_TblTextosGUI(IdIdioma, IdIdioma1) {}
+
+
