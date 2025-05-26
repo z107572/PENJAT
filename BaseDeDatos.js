@@ -106,7 +106,8 @@
             "Descansi": "Rest in peace - RIP!",
             "Puntuacio": "Score:"
         }
-    ]
+    ];
+    
     var Idiomes = Idiomes_dft; 
     var Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == "ca");
 
@@ -187,7 +188,7 @@ break;
 } 
 if (((lletra >="a") && (lletra <="z")) || (lletra === "ç")) {
 if (Paraula.includes(lletra)){
-    window.alert("Has acertado");
+    window.alert(Idioma.Encertat);
     pos = Paraula.indexOf(lletra);
     paraula [pos] = lletra;
     for (var i = pos++; i < Paraula.length; i++) {
@@ -301,34 +302,26 @@ AlaWeb_SQLite("ca");
 
  function CanviarIdioma(IdIdioma) {
 
-        AlaWeb_SQLite(IdIdioma);
         Idioma = Idiomes.find(Idioma => Idioma.IdIdioma == IdIdioma);
 
-       
-        /*
-        document.title = Idioma.Titol;
-        */
+
         document.getElementById("Versio").innerHTML = Idioma.Versio;
         document.getElementById("letra").placeholder = Idioma.Input;
         document.getElementById("button").innerHTML = Idioma.Comprovar;
-        document.getElementById("paraula").innerHTML = Idioma.Paraula;
+        document.getElementById("cocos").innerHTML = Idioma.Paraula;
         document.getElementById("vides").innerHTML = Idioma.Vides;
         document.getElementById("letras").innerHTML = Idioma.Lletres;
-        
-        /*       
-        document.getElementById("Sopes").innerHTML = Idioma.Sopes;
-        document.getElementById("button2").innerHTML = Idioma.Pista;                
-        document.getElementById("Moix").innerHTML = Idioma.Moix;
-        */
+       
 
-        // Escull una nova paraula aleatòriament
+
         window.alert("Nova paraula aleatòria / Nueva palabra aleatoria / New random word!");
-        // window.alert("[" + paraula + "]=[" + pista + "]");
+ 
    }
         
-    // Funció per carregar la base de dades penjat.db
+
+// Funció per carregar la base de dades penjat.db
     function AlaWeb_SQLite(IdIdioma) {
-        window.alert("AlaWeb_SQLite IdIdioma = '" + IdIdioma + "'");
+        // window.alert("AlaWeb_SQLite IdIdioma = '" + IdIdioma + "'");
         config = {
             locateFile: filename => `/dist/${filename}`
         };
@@ -336,21 +329,19 @@ AlaWeb_SQLite("ca");
         // Recuperam de la base de dades els TextosGUI per tots els Idiomes
         alasql('ATTACH SQLITE DATABASE penjat("db/penjat.db"); USE penjat; \n\
                 SELECT * FROM TblTextosGUI;',
-        //    [], function(idiomes) {Print_Data(Idiomes = idiomes.pop());}
-            [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
+            [], function(idiomes) {Print_Data(Idiomes = idiomes.pop());}
+        //    [], function(idiomes) {SQL_TblTextosGUI(IdIdioma, idiomes.pop());}
         );
     }
 
-    // Print data  
+ 
     function Print_Data(res) {
         for (var i in res)
         {
-           // console.log("row " + i);
-           // document.getElementById("res").innerHTML += "<br>";
+       
            for (var j in res[i])
              {
-              // console.log(" " + res[i][j]);
-              // document.getElementById("res").innerHTML += res[i][j] + ", ";
+          
               window.alert("res[" + i + "][" +j + "] = " + res[i][j]);
              }
         }
